@@ -1,0 +1,66 @@
+// import external assets
+@import './mixin';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+@font-face {
+  font-family: $font;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  color: $primary;
+  src: url("~@/assets/fonts/Inter-Regular.woff2") format("woff2"),
+    url("~@/assets/fonts/Inter-Regular.woff") format("woff");
+}
+
+// text-style mixin: size, height, weight
+a,p,h1,h2,h3,h4,h5,h6,i {
+   &.link {
+    color: $secondary-text !important;
+    cursor: pointer;
+   }
+   &.text {
+    font-family: $font;
+    font-weight: 700;
+    display: block;
+    color: $primary;
+
+    &__regular {
+      color: $primary;
+    }
+    &__secondary {
+      color: $secondary;
+    }
+    &__inactive {
+      color: $inactive-text;
+    }
+    &.heading {
+      &-1 {
+        @include text-style(3rem, auto, 700);
+      }
+      &-2 {
+        @include text-style(2rem, auto, 700);
+      }
+      &-4 {
+        @include text-style(1.5rem, auto, 600);
+        &.bold {
+          @include text-style(1.5rem, auto, 700);
+        }
+      }
+    }
+    &.body {
+        @include text-style(1.25rem, auto, 400);
+      &__bold{
+        @include text-style(1.25rem, auto, 700);
+      }
+      &__semi-bold{
+        @include text-style(1.25rem, auto, 600);
+      }
+    }
+    &.footnote {
+      @include text-style(1rem, auto, 400);
+    }
+  }
+}

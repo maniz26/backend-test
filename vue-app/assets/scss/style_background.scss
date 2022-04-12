@@ -1,0 +1,51 @@
+.bg {
+  &__primary {
+    background-color: $primary !important;
+    &--shade-1 {
+      background-color: $primary-s1 !important;
+    }
+    &--shade-2 {
+      background-color: $primary-s2 !important;
+    }
+    &--border {
+      background-color: $border !important;
+    }
+  }
+  &__secondary {
+    background-color: $secondary !important;
+  }
+  &__warning {
+    background-color: $alert-warning !important;
+  }
+  &__success {
+    background-color: $alert-success !important;
+  }
+  &__error {
+    background-color: $alert-error !important;
+  }
+  &__disabled {
+    &--light {
+      background-color: $disabled-light !important;
+    }
+    &--dark {
+        color: $light !important;
+        background-color: $disabled-dark !important;
+    }
+  }
+  &__light {
+    background-color: $light !important;
+  }
+  &__dark {
+    color: $light !important;
+    background-color: $dark !important;
+  }
+  &__sheet {
+    &--light {
+      background-color: $sheet-light !important;
+    }
+    &--dark {
+        color: $light !important;
+        background-color: $sheet-dark !important;
+    }
+  }
+}

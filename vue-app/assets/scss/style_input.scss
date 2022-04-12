@@ -1,0 +1,62 @@
+@import './mixin';
+
+.input {
+  &__line {
+    &--regular {
+      label {
+        color: $inactive-text !important;
+      }
+      input {
+        color: $regular-text !important;
+        padding-left: 0 !important;
+      }
+    }
+    &--disabled {
+    }
+  }
+  &__filled {
+    &--regular {
+      border-radius: 4px 4px 4px 4px;
+      label {
+        color: $inactive-text !important;
+      }
+      input {
+        color: $regular-text !important;
+        padding-left: 0 !important;
+      }
+      .v-input__slot {
+        &::before {
+          border-style: hidden !important;
+        }
+        &::after {
+          border-style: hidden !important;
+        }
+      }
+    }
+  }
+  &__outlined {
+    &--regular {
+      label {
+        color: $inactive-text !important;
+      }
+      input {
+        color: $regular-text !important;
+        padding-left: 0 !important;
+        caret-color: $primary !important;
+      }
+      fieldset {
+        border-color: $border !important;
+        @include dimension-radius(2px, 2px, 2px, 2px);
+        border-width: $border-width !important;
+      }
+      &.light {
+        background: $light !important;
+        .v-input__icon--prepend-inner {
+          .v-icon {
+            color: $inactive-text !important;
+          }
+        }
+      }
+    }
+  }
+}

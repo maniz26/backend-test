@@ -1,0 +1,16 @@
+.tab {
+  &__primary {
+    .v-tab {
+      text-transform: none;
+      border-bottom: $border-width solid $border;
+    }
+    .v-tab--active {
+      font-weight: $bold;
+    }
+    &.dark {
+      .theme--dark {
+        background-color: $primary !important;
+      }
+    }
+  }
+}

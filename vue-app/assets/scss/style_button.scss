@@ -1,0 +1,23 @@
+.button {
+  &__normal {
+    &--light {
+      height: 38px !important;
+      background-color: $light !important;
+      color: $primary !important;
+      &.pale {
+        border-color: $border !important;
+        border-width: $border-width !important;
+      }
+    }
+  }
+  &__large {
+    height: 72px !important;
+  }
+  &__text {
+    color: $secondary-text !important;
+  }
+  &__negative {
+    background: transparent !important;
+    border: $border-width solid $primary;
+  }
+}

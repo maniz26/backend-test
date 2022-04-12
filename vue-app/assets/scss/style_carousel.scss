@@ -1,0 +1,26 @@
+.carousel {
+  &__normal {
+    height: calc(var(--height) + 50px) !important;
+    .v-carousel__controls {
+      background-color: transparent !important;
+      .v-carousel__controls__item {
+        margin: 0;
+        &.v-item--active {
+          .v-btn__content {
+            i {
+              color: $dark-s1;
+            }
+          }
+          &::before{
+            content: none;
+          }
+        }
+        .v-btn__content {
+          i {
+            color: $border;
+          }
+        }
+      }
+    }
+  }
+}

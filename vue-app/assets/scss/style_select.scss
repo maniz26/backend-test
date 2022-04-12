@@ -1,0 +1,78 @@
+@import './mixin';
+
+.select {
+  &__outlined {
+    &--regular {
+      label {
+        color: $inactive-text !important;
+      }
+      input {
+        color: $regular-text !important;
+        padding-left: 0 !important;
+        caret-color: $primary !important;
+      }
+      fieldset {
+        border-color: $border !important;
+        @include dimension-radius(2px, 2px, 2px, 2px);
+        border-width: $border-width !important;
+        border-style: solid;
+      }
+      .primary--text {
+        color: $primary !important;
+        caret-color: $primary !important;
+      }
+      &-menu {
+        .v-select-list {
+          border-color: $border !important;
+          @include dimension-radius(2px, 2px, 2px, 2px);
+          border-width: $border-width !important;
+          border-style: solid;
+        }
+      }
+      &.light {
+        background: #fff;
+        .v-select__selections {
+          .v-select__selection {
+            color: $primary !important;
+          }
+        }
+        .v-input__append-inner {
+          .v-input__icon {
+            .v-icon {
+              color: $primary !important;
+            }
+          }
+        }
+      }
+    }
+    &--dark {
+      label {
+        color: $secondary !important;
+      }
+      input {
+        color: $secondary !important;
+        padding-left: 0 !important;
+        caret-color: $secondary !important;
+      }
+      fieldset {
+        border-color: $primary !important;
+        @include dimension-radius(0px, 2px, 2px, 0px);
+        border-width: $border-width !important;
+        border-style: solid;
+        background: $primary;
+      }
+      .primary--text {
+        color: $secondary !important;
+        caret-color: $secondary !important;
+      }
+      &-menu {
+        .v-select-list {
+          border-color: $border !important;
+          @include dimension-radius(2px, 2px, 2px, 2px);
+          border-width: $border-width !important;
+          border-style: solid;
+        }
+      }
+    }
+  }
+}

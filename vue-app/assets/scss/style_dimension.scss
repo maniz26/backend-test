@@ -1,0 +1,14 @@
+@import './mixin';
+
+// dimension-radius mixin: top-left corner, top-right corner, bottom-right corner, bottom-left corner
+.radius {
+  &__button {
+    @include dimension-radius($border-radius, $border-radius, $border-radius, $border-radius);
+  }
+  &__cards {
+    @include dimension-radius($border-radius, $border-radius, $border-radius, $border-radius);
+  }
+  &__sheets {
+    @include dimension-radius(16px, 16px, 0px, 0px);
+  }
+}

@@ -1,0 +1,9 @@
+@mixin text-style($font-size: 10px, $line-height: 12px , $font-weight: 400) {
+    font-size: $font-size !important;
+    line-height: $line-height !important;
+    font-weight: $font-weight !important;
+}
+
+@mixin dimension-radius($top-left: 0, $top-right: 0, $bottom-right: 0, $bottom-left: 0) {
+  border-radius: $top-left $top-right $bottom-right $bottom-left !important;
+}
